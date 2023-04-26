@@ -29,6 +29,8 @@ def otsuri_click():
 
     tkmsg.showinfo("精算", "おつりは{}円です".format(otsuri))
     ret = tkmsg.askyesno("終了", "プログラムを終了します")
+    rireki1.insert(tk.END, ">>おつりを排出しました。残金0円\n")
+    otsuri = 0
     if ret == True:
         root.destroy()
 
