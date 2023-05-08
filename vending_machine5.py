@@ -51,7 +51,7 @@ def calculation_sec(number):
             entry1.insert(tk.END, 0)
             daikin = 0
         else:
-            rireki1.insert(tk.END, ">>投入金額が不足しています\n")
+            rireki1.insert(tk.END, ">>投入金額が{}円不足しています\n".format(100 - int(daikin)))
             rireki1.see("end")
             
     elif number == 2:
@@ -64,7 +64,7 @@ def calculation_sec(number):
             entry1.insert(tk.END, 0)
             daikin = 0
         else:
-            rireki1.insert(tk.END, ">>投入金額が不足しています\n")
+            rireki1.insert(tk.END, ">>投入金額が{}円不足しています\n".format(80 - int(daikin)))
             rireki1.see("end")
 
     elif number == 3:
@@ -77,7 +77,7 @@ def calculation_sec(number):
             entry1.insert(tk.END, 0)
             daikin = 0
         else:
-            rireki1.insert(tk.END, ">>投入金額が不足しています\n")
+            rireki1.insert(tk.END, ">>投入金額が{}円不足しています\n".format(50 - int(daikin)))
             rireki1.see("end")
 
     
@@ -119,6 +119,7 @@ rireki1 = tk.Text(root, font=("Helvetica", 14), bg="gray", fg="white")
 rireki1.place(x=30, y=430, width=460, height=240)
 
 entry1.insert(tk.END, 0)
+entry1.focus_set()
             
 root.mainloop()
 
